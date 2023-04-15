@@ -1,0 +1,22 @@
+.head:hover{
+    color: #aca9a9;
+    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+  }
+
+  .hero-pic{
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hero-pic:hover {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+ 
+  

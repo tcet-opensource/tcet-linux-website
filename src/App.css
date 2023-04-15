@@ -1,0 +1,11 @@
+/* write your css here */
+::-webkit-scrollbar {
+    display:none;
+}
+
+@media print{
+    .pagebreak{
+        clear:both;
+        page-break-after:always
+    }
+}

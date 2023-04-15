@@ -1,0 +1,19 @@
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .head:hover{
+    color: #aca9a9;
+    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+  }
