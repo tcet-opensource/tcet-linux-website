@@ -1,6 +1,10 @@
-import React from "react";
-import welcomeImage from "../assets/image 9.jpg";
+import React, { useState } from "react";
+import welcomeImage from "../assets/image 9.png";
+import locationImage from "../assets/image 10.png";
+import keyboardImage from "../assets/image 11.png";
+import storageImage from "../assets/image 12.png";
 function InstallationSteps() {
+    const [image, setImage] = useState(welcomeImage); 
   return (
     <div>
       <div className="bg-[#101828]">
@@ -10,17 +14,17 @@ function InstallationSteps() {
             <p className="font-title text-[#FCFCFD] text-4xl pt-2 pb-2">
               TCET Linux Installation Steps
             </p>
-            <div>
-              <div className="pt-6">
+            <div onMouseLeave={()=>setImage(welcomeImage)}>
+              <div className="pt-6 cursor-pointer" onMouseEnter={()=>setImage(welcomeImage)}>
                 <p className="text-[#98A2B3] font-semibold">
                   1. Welcome Screen
                 </p>
-                <p className="text-[#F9FAFB] pt-2">
+                <p className="text-[#F9FAFB] pt-2" >
                   Risus ornare fermentum egestas convallis quis. Donec ut
                   pharetra placerat suspendisse.
                 </p>
               </div>
-              <div className="pt-6">
+              <div className="pt-6 cursor-pointer" onMouseEnter={()=>setImage(locationImage)}>
                 <p className="text-[#98A2B3] font-semibold">
                   2. Add Your Location
                 </p>
@@ -29,7 +33,7 @@ function InstallationSteps() {
                   phasellus dictumst ut in.
                 </p>
               </div>
-              <div className="pt-6">
+              <div className="pt-6 cursor-pointer" onMouseEnter={()=>setImage(keyboardImage)}>
                 <p className="text-[#98A2B3] font-semibold">
                   3. Select Your Keyboard
                 </p>
@@ -39,7 +43,7 @@ function InstallationSteps() {
                   aliquet.
                 </p>
               </div>
-              <div className="pt-6">
+              <div className="pt-6 cursor-pointer" onMouseEnter={()=>setImage(storageImage)}>
                 <p className="text-[#98A2B3] font-semibold">
                   4. Storage Partitions
                 </p>
@@ -57,9 +61,9 @@ function InstallationSteps() {
             </div>
           </div>
           <div className="relative w-1/2 flex justify-center align-middle">
-            {/* <div className="absolute z-30 top-10 w-[450px] h-[450px] bg-[#98A2B3] opacity-30 blur-lg flex-none order-4 rounded-full"></div> */}
-            <div className="w-full flex align-middle rounded-xl">
-              <img className="object-contain rounded-lg w-full sm:w-20" src={welcomeImage} />
+            <div className="absolute z-30 top-10 w-[600px] h-[450px] bg-[#98A2B3] opacity-30 blur-lg flex-none order-4 rounded-full"></div>
+            <div className="z-50 flex align-middle rounded-xl">
+              <img className="object-contain rounded-lg" src={image} />
             </div>
           </div>
         </div>
