@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import InstallationSteps from "../components/InstallationSteps";
 
 export interface Props {
   title: string;
@@ -42,6 +43,7 @@ const { title, description } = Astro.props;
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body class="font-sans" >
-    <slot />
+    <!-- <slot /> -->
+    <InstallationSteps client:load />
   </body>
 </html>
