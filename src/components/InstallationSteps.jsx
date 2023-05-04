@@ -118,8 +118,8 @@ function InstallationSteps() {
             </div>
           </div>
           <div className="relative w-full xl:w-1/2 sm:pl-0 md:pl-6 xl:pl-6">
-            <p className="text-[#6172F3] font-bold hidden xl:block">INSTALLATION GUIDE</p>
-            <p className="font-title text-[#FCFCFD] text-4xl pt-2 pb-2 hidden xl:block">
+            <p className="text-[#6172F3] font-bold hidden xl:block md:block">INSTALLATION GUIDE</p>
+            <p className="font-title text-[#FCFCFD] text-4xl pt-2 pb-2 hidden xl:block md:block">
               TCET Linux Installation Steps
             </p>
             <div className="absolute z-30 top-20 right-0 w-48 h-52 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-100 opacity-30 blur-2xl flex-none order-4 rounded-full transform rotate-45"></div>
