@@ -9,6 +9,9 @@ module.exports = {
 				sans: ["Inter", ...defaultTheme.fontFamily.sans],
 				title: ["Sora", ...defaultTheme.fontFamily.serif],
 			},
+			backgroundImage: {
+				'custom-bg': "url(images/download-background.png)"
+			},
 		},
 	},
 	plugins: [],
