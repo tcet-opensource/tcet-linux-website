@@ -3,37 +3,47 @@ import InstallationSteps from "../components/InstallationSteps";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="TCET Linux" description="Linux for TCET Services" >
-	<main class="" >
-
-<div class="w-full h-96 float bg-custom-bg bg-cover">
-            <div class=" max-w-md lg:min-w-max text-content float-left flex flex-col ml-10 mt-5 md:mt-20">
-                <div class="text-white text-2xl sm:text-3xl lg:text-6xl mb-9">Downloads</div>
-                <p class="text-white flex flex-wrap text-base lg:text-xl">
-                    TCET Linux source code and installers are available for download <br> for all versions!!
-                </p>
-                <div class="btns flex flex-row flex-wrap items-center text-white">
-                    <div class="flex flex-row bg-blue-700 w-fit py-2 px-5 cursor-pointer mt-2 md:mt-4 mr-2 rounded-full">
-                        <button>Download</button>
-                        &nbsp;
-                        <img class="mt-1 w-5 h-5" src="images/download-icon.png" alt="">
-                    </div>
-                    <div class="flex flex-row w-fit py-2 px-5 cursor-pointer mt-2 md:mt-4 rounded-full border border-white">
-                        <button>Requirements</button>
-                        &nbsp;
-                        <img class="mt-1 w-4 h-full" src="images/requirements-icon.png" alt="">
-                    </div>
-                    <div class="underline underline-offset-4 flex ml-3">
-                        <a class="mt-2 md:mt-4" href="#">
-                            Verify your downloads &rarr;
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="image-content hidden md:block float-right">
-                <img class="w-60 h-40 lg:w-80 lg:h-60 mt-20 lg:mr-5" src="images/man-with-laptop.png" alt="">
-            </div>
-        </div>
-
-	</main>
-</Layout>
+<div class="w-full h-96 bg-slate-800 relative">
+  <div class="downloadSectionGradient"></div>
+  <div
+    class="max-w-md lg:min-w-max text-content float-left flex flex-col ml-10 mt-5 md:mt-20 relative z-10"
+  >
+    <div class="text-white text-2xl sm:text-3xl lg:text-6xl mb-9">
+      Downloads
+    </div>
+    <p class="text-white flex flex-wrap text-base lg:text-xl">
+      TCET Linux source code and installers are available for download <br /> for
+      all versions!!
+    </p>
+    <div class="btns flex flex-row flex-wrap items-center text-white">
+      <div
+        class="flex flex-row bg-blue-700 w-fit py-2 px-5 cursor-pointer mt-2 md:mt-4 mr-2 rounded-full"
+      >
+        <button>Download</button>
+        &nbsp;
+        <img class="mt-1 w-5 h-5" src="images/download-icon.png" alt="" />
+      </div>
+      <div
+        class="flex flex-row w-fit py-2 px-5 cursor-pointer mt-2 md:mt-4 rounded-full border border-white"
+      >
+        <button>Requirements</button>
+        &nbsp;
+        <img
+          class="mt-1 w-4 h-full"
+          src="images/requirements-icon.png"
+          alt=""
+        />
+      </div>
+      <div class="underline underline-offset-4 flex ml-3">
+        <a class="mt-2 md:mt-4" href="#"> Verify your downloads &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="image-content hidden md:block float-right relative z-10">
+    <img
+      class="w-60 h-40 lg:w-80 lg:h-60 mt-20 lg:mr-5"
+      src="images/man-with-laptop.png"
+      alt=""
+    />
+  </div>
+</div>

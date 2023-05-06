@@ -74,7 +74,7 @@ function InstallationSteps() {
     <div className="overflow-hidden bg-[#101828]">
       <div className="">
         <div className="p-12 w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
-          <div className="w-full xl:w-1/2">
+          <div className="w-full xl:w-1/2 relative">
             <p className="text-[#6172F3] font-bold">INSTALLATION GUIDE</p>
             <p className="font-title text-[#FCFCFD] text-4xl pt-2 pb-2">
               TCET Linux Installation Steps
