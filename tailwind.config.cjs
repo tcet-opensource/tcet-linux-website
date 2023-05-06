@@ -17,6 +17,14 @@ module.exports = {
 				'custom-btn-blue': "#01105F",
 				'custom-btn': "#2D3282",
 			},
+			borderColor:
+			{
+				'custom-border-color': "#53B1FD",
+			},
+			borderWidth:
+			{
+				'custom-w': "1px 0px 2px 0px",
+			},
 		},
 	},
 	plugins: [],
