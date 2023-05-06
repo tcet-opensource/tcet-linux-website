@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import DownloadSection from "../components/DownloadSection.astro";
 import InstallationSteps from "../components/InstallationSteps";
-
 ---
 
 <Layout title="TCET Linux" description="Linux for TCET Services" >
-	<main class="" >
+	<main class="flex flex-col" >
 		<!-- <h1 class="font-title" >TCET-Linux</h1> -->
+		<DownloadSection />
 		<InstallationSteps client:load />
 	</main>
 </Layout>
