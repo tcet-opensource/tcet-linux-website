@@ -8,35 +8,40 @@ import Layout from "../layouts/Layout.astro";
   <div
     class="max-w-md lg:min-w-max text-content float-left flex flex-col ml-10 mt-5 md:mt-20 relative z-10"
   >
-    <div class="text-white text-2xl sm:text-3xl lg:text-6xl mb-9">
+    <div class="text-white font-semibold text-2xl sm:text-3xl lg:text-6xl mb-9">
       Downloads
     </div>
-    <p class="text-white flex flex-wrap text-base lg:text-xl">
+    <p class="text-white flex flex-wrap font-normal text-xl">
       TCET Linux source code and installers are available for download <br /> for
       all versions!!
     </p>
-    <div class="btns flex flex-row flex-wrap items-center text-white">
+    <div class="btns flex flex-row flex-wrap items-center gap-5 text-white">
       <div
-        class="flex flex-row bg-blue-700 w-fit py-2 px-5 cursor-pointer mt-2 md:mt-4 mr-2 rounded-full"
+        class="flex flex-row bg-blue-700 w-fit py-2 px-5 cursor-pointer mt-2 md:mt-4 gap-5 items-center justify-center rounded-full"
       >
-        <button>Download</button>
-        &nbsp;
-        <img class="mt-1 w-5 h-5" src="images/download-icon.png" alt="" />
+        <button class=" w-16 h-6 font-semibold text-base">Download</button>
+        <img class="w-full h-full" src="images/download-icon.png" alt="" />
       </div>
       <div
-        class="flex flex-row w-fit py-2 px-5 cursor-pointer mt-2 md:mt-4 rounded-full border border-white"
+        class="flex flex-row w-fit p-2 cursor-pointer mt-2 md:mt-4 gap-2 items-center justify-center border rounded-full border-white"
       >
-        <button>Requirements</button>
-        &nbsp;
-        <img
-          class="mt-1 w-4 h-full"
+        <button class=" w-24 h-6 md:font-semibold">Requirements</button>
+        <span class="p-1 ml-1 bg-custom-btn rounded-full">
+          <img
+          class="w-full h-full"
           src="images/requirements-icon.png"
           alt=""
-        />
+          />
+        </span>
       </div>
-      <div class="underline underline-offset-4 flex ml-3">
+      <!-- <div class="underline underline-offset-4 flex ml-3">
         <a class="mt-2 md:mt-4" href="#"> Verify your downloads &rarr;</a>
-      </div>
+      </div> -->
+      <button class="flex flex-row items-center mt-2 p-2 gap-2 ">
+       <i class="font-semibold text-base underline underline-offset-4 not-italic">
+        Verify your download &rarr;
+        </i> 
+      </button>
     </div>
   </div>
   <div class="image-content hidden md:block float-right relative z-10">
