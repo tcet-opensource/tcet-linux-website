@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import Footer from "../components/Footer/index.astro";
 import "../styles.css"
 export interface Props {
   title: string;
@@ -41,7 +42,8 @@ const { title, description } = Astro.props;
     <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-  <body class="font-sans" >
+  <body class="font-sans">
     <slot />
+    <Footer />
   </body>
 </html>
