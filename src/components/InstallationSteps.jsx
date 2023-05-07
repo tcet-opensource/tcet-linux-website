@@ -74,16 +74,16 @@ function InstallationSteps() {
     <div className="overflow-hidden bg-[#101828]">
       <div className="">
         <div className="p-12 w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
-          <div className="w-full xl:w-1/2">
+          <div className="w-full xl:w-1/2 relative">
             <p className="text-[#6172F3] font-bold">INSTALLATION GUIDE</p>
-            <p className="font-title text-[#FCFCFD] text-4xl pt-2 pb-2">
+            <p className="font-title text-[#FCFCFD] text-2xl md:text-4xl pt-2 pb-2">
               TCET Linux Installation Steps
             </p>
             <div className="absolute z-30 top-14 left-0 w-48 h-80  bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-100 opacity-30 blur-2xl flex-none order-4 rounded-xl transform -rotate-45"></div>
             <div onMouseLeave={() => setImageFirst(welcomeImage)}>
               {installationStepsFirstSet.map((step) => (
                 <div
-                  className="pt-6 cursor-pointer"
+                  className="pt-6 cursor-pointer text-sm sm:text-base"
                   onMouseEnter={() => setImageFirst(step.image)}
                   key={step.id}
                 >

@@ -1,0 +1,12 @@
+.downloadSectionGradient {
+    background: linear-gradient(135.48deg, #99FFF9 38.91%, #5961FF 49.05%, #FDE9FF 54.12%, #FF00C7 61.8%);
+    opacity: 0.2;
+    filter: blur(277.5px);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
