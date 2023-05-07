@@ -1,3 +1,6 @@
+## Deploy Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bcfe715e-e0be-4844-8d97-46f6d8e38406/deploy-status)](https://app.netlify.com/sites/tcet-linux-deploy/deploys)
+
 # Astro Starter Kit: Minimal
 
 ```
