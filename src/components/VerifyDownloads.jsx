@@ -30,26 +30,61 @@ function VerifyDownloads() {
         <div className="bg-[#1D2939] w-fit m-4 p-2 rounded-2xl">
           <p className="text-[#FFFFFF]">Steps 1:</p>
         </div>
-        <div className="flex mt-6">
+        <div className="flex mt-6 flex-col xl:flex-row md:flex-row ">
           {stepOne.map((step) => (
             <div
               key={step.id}
-              className="m-4 rounded-2xl bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 mt-2 mb-2 backdrop-blur-xl"
+              className="m-4 rounded-2xl  mt-2 mb-2 bg-[#1D2939]"
             >
-              <div className="p-4 bg-[#1D2939] rounded-t-xl">
+              <div className="p-4 rounded-t-xl">
                 <p className="font-title text-[#FCFCFD] text-xl md:text-2xl pt-2 pb-2">
                   {step.nameOfOS}
                 </p>
                 <p className="text-[#E4E7EC]">{step.description}</p>
               </div>
-              <div className="w-full relative mt-2 cursor-pointer">
-                <div className="w-full flex justify-around align-middle p-2">
-                  <p className="text-[#E4E7EC] flex-1">-a 256 iso-name.iso</p>
-                  <img src={clickToCopyImg} />
+              {/* bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 rounded-b-xl */}
+              <div className="w-full relative mt-2 cursor-pointer overflow-hidden">
+                <div className="absolute top-0 left-0 verifyDownloadGradient h-20 w-full"></div>
+                <div className="w-full h-fit flex justify-around align-middle p-3">
+                  <p className="text-[#E4E7EC] flex-1 mt-1">
+                    -a 256 iso-name.iso
+                  </p>
+                  <img
+                    src={clickToCopyImg}
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="pt-4">
+        <div className="bg-[#1D2939] w-fit m-4 p-2 rounded-2xl">
+          <p className="text-[#FFFFFF]">Steps 2:</p>
+        </div>
+        <div className="w-full mt-6 ">
+        <p className="text-[#FFFFFF] ml-4 mb-2">In all the above cases, if the returned value matches with the sha256sum given below, your download is authentic.</p>
+          <div className="m-4 rounded-2xl  mt-2 mb-2 bg-[#1D2939]">
+            <div className="p-4 rounded-t-xl">
+              <p className="font-title text-[#FCFCFD] text-xl md:text-2xl pt-2 pb-2">
+                SHA256SUMS Below:
+              </p>
+              <p className="text-[#E4E7EC]">
+                archlinux-gui-plasma-2022.07-x86_64.iso
+              </p>
+            </div>
+            {/* bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 rounded-b-xl */}
+            <div className="w-full relative mt-2 cursor-pointer overflow-hidden rounded-b-xl">
+              <div className="absolute top-0 left-0 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 rounded-b-xl h-72 w-full opacity-50"></div>
+              <div className="w-full h-fit flex justify-around align-middle p-3">
+                <p className="text-[#E4E7EC] flex-1 mt-1 overflow-scroll md:overflow-hidden xl:overflow-hidden" >
+                  17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54
+                </p>
+                <img src={clickToCopyImg} className="w-8 h-8 object-contain" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
