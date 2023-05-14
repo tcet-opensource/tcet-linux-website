@@ -7,20 +7,31 @@ function VerifyDownloads() {
       nameOfOS: "MacOS",
       description:
         "open terminal in the Downloads folder or wherever the ISO is and type shasum",
+      downloadableFileName: "-a 256 iso-name.iso",
     },
     {
       id: 2,
       nameOfOS: "Windows",
       description:
         "open terminal in the Downloads folder or wherever the ISO is and type shasum",
+      downloadableFileName: "-a 256 iso-name.iso",
     },
     {
       id: 3,
       nameOfOS: "Linux",
       description:
         "open terminal in the Downloads folder or wherever the ISO is and type shasum",
+      downloadableFileName: "-a 256 iso-name.iso",
     },
   ]);
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => console.log("Copied to clipboard:", text))
+      .catch((error) => console.error("Failed to copy to clipboard:", error));
+  };
+
   return (
     <div className="bg-[#101828] p-4">
       <p className="font-title text-center text-[#FCFCFD] text-2xl md:text-4xl pt-2 pb-2">
@@ -43,17 +54,15 @@ function VerifyDownloads() {
                 <p className="text-[#E4E7EC]">{step.description}</p>
               </div>
               {/* bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 rounded-b-xl */}
-              <div className="w-full relative mt-2 cursor-pointer overflow-hidden">
+              <div className="w-full relative mt-2 cursor-pointer overflow-hidden" onClick={() => {navigator.clipboard.writeText(step.downloadableFileName)}} >
                 <div className="absolute top-0 left-0 verifyDownloadGradient h-20 w-full"></div>
-                <div className="w-full h-fit flex justify-around align-middle p-3">
-                  <p className="text-[#E4E7EC] flex-1 mt-1">
-                    -a 256 iso-name.iso
-                  </p>
+                <button className="w-full h-fit flex justify-around align-middle p-3">
+                  <p className="text-[#E4E7EC] flex-1 mt-1">{step.downloadableFileName}</p>
                   <img
                     src={clickToCopyImg}
                     className="w-8 h-8 object-contain"
                   />
-                </div>
+                </button>
               </div>
             </div>
           ))}
@@ -64,8 +73,11 @@ function VerifyDownloads() {
           <p className="text-[#FFFFFF]">Steps 2:</p>
         </div>
         <div className="w-full mt-6 ">
-        <p className="text-[#FFFFFF] ml-4 mb-2">In all the above cases, if the returned value matches with the sha256sum given below, your download is authentic.</p>
-          <div className="m-4 rounded-2xl  mt-2 mb-2 bg-[#1D2939]">
+          <p className="text-[#FFFFFF] ml-4 mb-2">
+            In all the above cases, if the returned value matches with the
+            sha256sum given below, your download is authentic.
+          </p>
+          <div className="m-4 rounded-2xl  mt-2 mb-2 bg-[#1D2939]" >
             <div className="p-4 rounded-t-xl">
               <p className="font-title text-[#FCFCFD] text-xl md:text-2xl pt-2 pb-2">
                 SHA256SUMS Below:
@@ -75,14 +87,24 @@ function VerifyDownloads() {
               </p>
             </div>
             {/* bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 rounded-b-xl */}
-            <div className="w-full relative mt-2 cursor-pointer overflow-hidden rounded-b-xl">
+            <div
+              className="w-full relative mt-2 cursor-pointer overflow-hidden rounded-b-xl"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  "17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54"
+                );
+              }}
+            >
               <div className="absolute top-0 left-0 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 rounded-b-xl h-72 w-full opacity-50"></div>
-              <div className="w-full h-fit flex justify-around align-middle p-3">
-                <p className="text-[#E4E7EC] flex-1 mt-1 overflow-scroll md:overflow-hidden xl:overflow-hidden" >
+              <button
+                type="button"
+                className="z-20 w-full h-fit flex justify-around align-middle p-3"
+              >
+                <p className="text-[#E4E7EC] flex-1 mt-1 overflow-scroll md:overflow-hidden xl:overflow-hidden">
                   17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54
                 </p>
                 <img src={clickToCopyImg} className="w-8 h-8 object-contain" />
-              </div>
+              </button>
             </div>
           </div>
         </div>
