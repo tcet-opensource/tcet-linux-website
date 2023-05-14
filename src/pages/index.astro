@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import DownloadSection from "../components/DownloadSection.astro";
 import InstallationSteps from "../components/InstallationSteps";
+import VerifyDownloads from "../components/VerifyDownloads";
 ---
 
 <Layout title="TCET Linux" description="Linux for TCET Services" >
@@ -9,5 +10,6 @@ import InstallationSteps from "../components/InstallationSteps";
 		<!-- <h1 class="font-title" >TCET-Linux</h1> -->
 		<DownloadSection />
 		<InstallationSteps client:load />
+		<VerifyDownloads client:load />
 	</main>
 </Layout>
