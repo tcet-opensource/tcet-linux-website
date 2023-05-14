@@ -56,7 +56,7 @@ function VerifyDownloads() {
               >
                 <div className="absolute top-0 left-0 verifyDownloadGradient h-20 w-full"></div>
                 <button className="w-full h-fit flex justify-around align-middle p-3">
-                  <p className="text-[#E4E7EC] flex-1 mt-1">
+                  <p className="text-[#E4E7EC] flex-1 mt-1 break-all">
                     {step.downloadableFileName}
                   </p>
                   <img
@@ -96,12 +96,12 @@ function VerifyDownloads() {
                 );
               }}
             >
-              <div className="absolute top-0 left-0 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 rounded-b-xl h-72 w-full opacity-50 blur-lg"></div>
+              <div className="absolute top-0 left-0 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 rounded-b-xl h-24 w-full opacity-50 blur-lg"></div>
               <button
                 type="button"
-                className="z-20 w-full h-fit flex justify-around align-middle p-3"
+                className="z-20 w-full h-auto flex justify-around align-middle  p-3"
               >
-                <p className="text-[#E4E7EC] flex-1 mt-1 overflow-scroll md:overflow-hidden xl:overflow-hidden">
+                <p className="text-[#E4E7EC] flex-1 mt-1 break-all">
                   17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54
                 </p>
                 <img src={clickToCopyImg} className="w-8 h-8 object-contain" />
