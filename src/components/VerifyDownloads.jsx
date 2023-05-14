@@ -47,7 +47,6 @@ function VerifyDownloads() {
                 </p>
                 <p className="text-[#E4E7EC]">{step.description}</p>
               </div>
-              {/* bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 rounded-b-xl */}
               <div
                 className="w-full relative mt-2 cursor-pointer overflow-hidden"
                 onClick={() => {
