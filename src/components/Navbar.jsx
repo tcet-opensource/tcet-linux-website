@@ -50,7 +50,7 @@ const Navbar = () => {
                                 </a>
                             ))}
 
-                            <div className="ml-8 border-2 border-[#475467] rounded-lg">
+                            <div className="!ml-8 border-2 border-[#475467] rounded-lg">
                                 <button className="inline-flex items-center text-[#E0EAFF] border-1 border-white py-1 px-2 focus:outline-none rounded md:mt-0 hover:bg-[#475467] hover:text-[#E0EAFF] text-base 2xl:text-lg"><a href='/Get Started'>Get Started</a>
                                </button>
                             </div>
