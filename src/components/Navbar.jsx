@@ -34,7 +34,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex items-center">
                         <a href='/' className='text-white'>
-                            <img src="tcet-opensource-logo.png" alt="TCET Open Source Logo" srcSet="" />
+                            <img src="tcet-opensource-logo.svg" alt="TCET Open Source Logo" srcSet="" />
                         </a>
                     </div>
                     {/* Navlinks */}
