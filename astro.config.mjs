@@ -11,5 +11,10 @@ export default defineConfig({
   integrations: [tailwind(), react(), sitemap(), robotsTxt()],
   site: "https://linux.tcetmumbai.in",
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
+  vite: {
+    ssr: {
+      noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/,/^usehooks-ts\/*/,/^react-countup\/*/ ]
+    }
+  },
 });
