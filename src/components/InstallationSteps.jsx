@@ -71,7 +71,7 @@ function InstallationSteps() {
     },
   ];
   return (
-    <div className="overflow-hidden bg-[#101828]">
+    <div className="overflow-hidden bg-[#101828] py-4 px-10 lg:px-12">
       <div className="">
         <div className="p-12 w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
           <div className="w-full xl:w-1/2 relative">
@@ -95,7 +95,7 @@ function InstallationSteps() {
               ))}
             </div>
             <div className="mt-8 hidden xl:block md:block">
-              <button className="text-[#F9FAFB] border border-[#667085] rounded-lg p-3">
+              <button className="text-[#F9FAFB] border border-[#667085] hover:bg-blue-50 hover:bg-opacity-20 rounded-lg p-3">
                 {" "}
                 Download
               </button>
@@ -138,7 +138,7 @@ function InstallationSteps() {
               ))}
             </div>
             <div className="mt-8">
-              <button className="text-[#F9FAFB] border border-[#667085] rounded-lg p-3">
+              <button className="text-[#F9FAFB] border border-[#667085] hover:bg-blue-50 hover:bg-opacity-20 rounded-lg p-3">
                 {" "}
                 Download
               </button>
