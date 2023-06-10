@@ -32,8 +32,11 @@ const { title, description } = Astro.props;
         basic: {
           title: title,
           type: "website",
-          image: "/mockup.jpg",
+          image: "/HeroSectionScreenshot.jpg",
           url: "https://linux.tcetmumbai.in",
+        },
+        image: {
+          width: 1200
         },
       }}
       twitter={{
@@ -42,6 +45,18 @@ const { title, description } = Astro.props;
           card: "summary_large_image",
           description: description,
           creator: "@tcetopensource",
+      }}
+      extend={{
+        meta: [
+          {
+            name: "og:image",
+            content: "/mockup.jpg",
+          },
+          {
+            name: "og:image:width",
+            content: "500",
+          },
+        ]
       }}
     />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
