@@ -94,12 +94,12 @@ function InstallationSteps() {
                 </div>
               ))}
             </div>
-            <div className="mt-8 hidden xl:block md:block">
+            {/* <div className="mt-8 hidden xl:block md:block">
               <button className="text-[#F9FAFB] border border-[#667085] hover:bg-blue-50 hover:bg-opacity-20 rounded-lg p-3">
                 {" "}
                 Download
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="relative w-full flex justify-center align-middle xl:w-1/2">
             <div className="absolute z-30 top-5 w-48 h-52 xl:w-[600px] xl:h-[450px] bg-[#98A2B3] opacity-30 blur-2xl flex-none order-4 rounded-full"></div>
@@ -137,12 +137,12 @@ function InstallationSteps() {
                 </div>
               ))}
             </div>
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <button className="text-[#F9FAFB] border border-[#667085] hover:bg-blue-50 hover:bg-opacity-20 rounded-lg p-3">
                 {" "}
                 Download
               </button>
-            </div>
+            </div> */}
           </div>
           
         </div>
