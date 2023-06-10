@@ -1,0 +1,117 @@
+---
+import clickToCopyImg from "../assets/clickToCopy.png";
+import infoIconImg from "../assets/infoIcon.png";
+import CopyToClipboard from "./CopyToClipboard";
+
+const stepOne = [
+  {
+    id: 1,
+    nameOfOS: "Windows",
+    description:
+      "open terminal in the Downloads folder or wherever the ISO is and type shasum",
+    downloadableFileName: "-a 256 iso-name.iso",
+  },
+  {
+    id: 2,
+    nameOfOS: "MacOS",
+    description:
+      "open terminal in the Downloads folder or wherever the ISO is and type shasum",
+    downloadableFileName: "-a 256 iso-name.iso",
+  },
+  {
+    id: 3,
+    nameOfOS: "Linux",
+    description:
+      "open terminal in the Downloads folder or wherever the ISO is and type shasum",
+    downloadableFileName: "-a 256 iso-name.iso",
+  },
+];
+---
+
+<div id="verify" class="bg-[#101828] p-4 px-10 lg:px-20">
+  <p
+    class="font-title text-center text-[#FCFCFD] text-2xl md:text-4xl pt-2 pb-2"
+  >
+    Verify Your Download
+  </p>
+  <div class="pt-4">
+    <div class="bg-[#1D2939] w-fit m-4 p-2 rounded-2xl">
+      <p class="text-[#FFFFFF]">Steps 1:</p>
+    </div>
+    <div class="flex mt-6 flex-col xl:flex-row md:flex-row">
+      {
+        stepOne.map((step) => (
+          <div  class="m-4 rounded-2xl  mt-2 mb-2 bg-[#1D2939]">
+            <div class="p-4 rounded-t-xl">
+              <p class="font-title text-[#FCFCFD] text-xl md:text-2xl pt-2 pb-2">
+                {step.nameOfOS}
+              </p>
+              <p class="text-[#E4E7EC]">{step.description}</p>
+            </div>
+            <div
+              class="w-full relative mt-2  overflow-hidden"              
+            >
+              <div class="absolute top-0 left-0 verifyDownloadGradient h-20 w-full" />
+              <span class="w-full h-fit flex justify-around align-middle p-3 ">
+                <p class="text-[#E4E7EC] flex-1 mt-1 break-all">
+                  {step.downloadableFileName}
+                </p>
+                <CopyToClipboard client:load text={step.downloadableFileName} />
+              </span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="pt-4">
+    <div class="bg-[#1D2939] w-fit m-4 p-2 rounded-2xl">
+      <p class="text-[#FFFFFF]">Steps 2:</p>
+    </div>
+    <div class="w-full mt-6">
+      <p class="text-[#FFFFFF] ml-4 mb-4">
+        In all the above cases, if the returned value matches with the sha256sum
+        given below, your download is authentic.
+      </p>
+      <div class="m-4 rounded-2xl mt-2 mb-2 bg-[#1D2939]">
+        <div class="p-4 rounded-t-xl">
+          <p class="font-title text-[#FCFCFD] text-xl md:text-2xl pt-2 pb-2">
+            SHA256SUMS Below:
+          </p>
+          <p class="text-[#E4E7EC]">archlinux-gui-plasma-2022.07-x86_64.iso</p>
+        </div>
+        {
+          /* bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 rounded-b-xl */
+        }
+        <div
+          class="w-full relative mt-2  overflow-hidden rounded-b-xl"          
+        >
+          <div
+            class="absolute top-0 left-0 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 rounded-b-xl h-24 w-full opacity-50 blur-lg
+            pointer-events-none"
+          >
+          </div>
+          <span
+            class="z-20 w-full h-auto flex justify-around align-middle p-3 "
+          >
+            <p class="text-[#E4E7EC] flex-1 mt-1 break-all">
+              17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54
+            </p>
+            <CopyToClipboard client:load text={"17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54"} />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-4">
+    <div class="flex bg-[#1D2939] border-2 border-[#344054] rounded-xl m-4 p-4">
+      <img src={infoIconImg} class="w-4 h-4 object-contain mt-1" />
+      <p class="text-[#D0D5DD] ml-2">
+        Please refer to the convention below. sha256sum is the long alphanumeric
+        string, on the left. iso-name refer to the name of the ISO. It should
+        contain the .iso extension. DOB stands for date of build. It has nothing
+        to do with the verification process. It's just there for reference.
+      </p>
+    </div>
+  </div>
+</div>
