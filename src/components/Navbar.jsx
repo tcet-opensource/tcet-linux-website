@@ -3,20 +3,18 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const navlinks = [
     {
-        title: "Downloads",
-        link: "/Downloads",
+        title: "Download",
+        link: "/#download",
     },
     {
-        title: "Documnets",
-        link: "/Documents",
-    },
-    {
-        title: "Linux",
-        link: "/Linux",
+        title: "Documentation",
+        link: "https://opensource.tcetmumbai.in/docs/projects/tcet-linux/about-tcet-linux",
+        newtab: true
     },
     {
         title: "About Us",
-        link: "/About Us",
+        link: "https://opensource.tcetmumbai.in/docs/about-tcetopensource",
+        newtab: true
     },
 ];
 
@@ -45,13 +43,17 @@ const Navbar = () => {
                                     key={index}
                                     className="text-[#E4E7EC] transition-all duration-500 hover:bg-[#475467] hover:text-[#E0EAFF] px-2 py-1 rounded-md text-md font-medium"
                                     href={link.link}
+                                    target=
+                                    {
+                                        link.newtab?"_blank":""
+                                    }
                                 >
                                     {link.title}
                                 </a>
                             ))}
 
                             <div className="!ml-8 border-2 border-[#475467] rounded-lg">
-                                <button className="inline-flex items-center text-[#E0EAFF] border-1 border-white py-1 px-2 focus:outline-none rounded md:mt-0 hover:bg-[#475467] hover:text-[#E0EAFF] text-base 2xl:text-lg"><a href='/Get Started'>Get Started</a>
+                                <button className="inline-flex items-center text-[#E0EAFF] border-1 border-white py-1 px-2 focus:outline-none rounded md:mt-0 hover:bg-[#475467] hover:text-[#E0EAFF] text-base 2xl:text-lg"><a href='/#installation'>Get Started</a>
                                </button>
                             </div>
                         </div>

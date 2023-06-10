@@ -15,28 +15,28 @@ function InstallationSteps() {
       id: 1,
       header: "Welcome Screen",
       description:
-        "Risus ornare fermentum egestas convallis quis. Donec ut pharetra placerat suspendisse.",
+        "Launch the installer by searching for 'Install TCET Linux'. The installer will look like this.",
       image: welcomeImage,
     },
     {
       id: 2,
       header: "Add Your Location",
       description:
-        "Porttitor penatibus velit risus fermentum facilisis. Sit at phasellus dictumst ut in.",
+        "Select your location by clicking on the timezones on the map. If you have internet connection, this should happen automatically.",
       image: locationImage,
     },
     {
       id: 3,
       header: "Select Your Keyboard",
       description:
-        "Tincidunt lobortis non quis egestas pulvinar maecenas. Molestie nulla vestibulum sodales facilisis vitae lacus aliquet.",
+        "Keyboard layout is automatically mapped by location. You can also check if the keyboard layout is correct by texting it in the text box.",
       image: keyboardImage,
     },
     {
       id: 4,
-      header: "Storage Parition",
+      header: "Storage Partitiion",
       description:
-        "Elit dolor amet quam et. Egestas risus libero diam lorem commodo.",
+        "Automatic installation will create a Fat32 EFI System Partition, and a root partition with the selected filesystem. Default filesystem is ext4. We recommend you to do a manual installation. Checkout the tutorials page on how to do manual partitioning on UEFI/GPT systems.",
       image: storageImage,
     },
   ];
@@ -45,33 +45,33 @@ function InstallationSteps() {
       id: 5,
       header: "User details",
       description:
-        "Risus ornare fermentum egestas convallis quis. Donec ut pharetra placerat suspendisse.",
+        "Add your username that will be visible on the login screen. The administrator account password is for the root user. You can keep it different from regular user to improve security, or keep it same for the sake of convenience.",
       image: userImage,
     },
     {
       id: 6,
       header: "Summary",
       description:
-        "Porttitor penatibus velit risus fermentum facilisis. Sit at phasellus dictumst ut in.",
+        "This section will give you a summary of the choices you have made.",
       image: summaryImage,
     },
     {
       id: 7,
       header: "Installation",
       description:
-        "Tincidunt lobortis non quis egestas pulvinar maecenas. Molestie nulla vestibulum sodales facilisis vitae lacus aliquet.",
+        "Installation will take around 5-10 minutes, depending on the speed of your SSD/HDD.",
       image: installationImage,
     },
     {
       id: 8,
       header: "Installation Done",
       description:
-        "Elit dolor amet quam et. Egestas risus libero diam lorem commodo.",
+        "You can restart the system and boot into fresh install of TCET Linux",
       image: finishImage,
     },
   ];
   return (
-    <div className="overflow-hidden bg-[#101828] py-4 px-10 lg:px-12">
+    <div id="installation" className="overflow-hidden bg-[#101828] py-4 px-10 lg:px-12">
       <div className="">
         <div className="p-12 w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
           <div className="w-full xl:w-1/2 relative">
@@ -94,12 +94,12 @@ function InstallationSteps() {
                 </div>
               ))}
             </div>
-            <div className="mt-8 hidden xl:block md:block">
+            {/* <div className="mt-8 hidden xl:block md:block">
               <button className="text-[#F9FAFB] border border-[#667085] hover:bg-blue-50 hover:bg-opacity-20 rounded-lg p-3">
                 {" "}
                 Download
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="relative w-full flex justify-center align-middle xl:w-1/2">
             <div className="absolute z-30 top-5 w-48 h-52 xl:w-[600px] xl:h-[450px] bg-[#98A2B3] opacity-30 blur-2xl flex-none order-4 rounded-full"></div>
@@ -137,12 +137,12 @@ function InstallationSteps() {
                 </div>
               ))}
             </div>
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <button className="text-[#F9FAFB] border border-[#667085] hover:bg-blue-50 hover:bg-opacity-20 rounded-lg p-3">
                 {" "}
                 Download
               </button>
-            </div>
+            </div> */}
           </div>
           
         </div>
