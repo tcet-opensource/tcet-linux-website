@@ -7,7 +7,7 @@ const navlinks = [
         link: "/Downloads",
     },
     {
-        title: "Documnets",
+        title: "Documents",
         link: "/Documents",
     },
     {
