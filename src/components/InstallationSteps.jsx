@@ -34,9 +34,9 @@ function InstallationSteps() {
     },
     {
       id: 4,
-      header: "Storage Parition",
+      header: "Storage Partitiion",
       description:
-        "Automatic installation will create a Fat32 EFI System Partition, and a root partition with the selected filesystem. Default filesystem is ext4. We recommend you to do a manual installation. Checkout the tutorials page on how to do manual paritioning on UEFI/GPT systems.",
+        "Automatic installation will create a Fat32 EFI System Partition, and a root partition with the selected filesystem. Default filesystem is ext4. We recommend you to do a manual installation. Checkout the tutorials page on how to do manual partitioning on UEFI/GPT systems.",
       image: storageImage,
     },
   ];
@@ -45,7 +45,7 @@ function InstallationSteps() {
       id: 5,
       header: "User details",
       description:
-        "Add your username that will be visible on the login screen. The administrator account password is for the root user. You can keep it different from regular user to imporve security, or keep it same for the sake of convinience.",
+        "Add your username that will be visible on the login screen. The administrator account password is for the root user. You can keep it different from regular user to improve security, or keep it same for the sake of convenience.",
       image: userImage,
     },
     {
