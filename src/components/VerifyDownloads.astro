@@ -8,22 +8,22 @@ const stepOne = [
     id: 1,
     nameOfOS: "Windows",
     description:
-      "open terminal in the Downloads folder or wherever the ISO is and type shasum",
-    downloadableFileName: "-a 256 iso-name.iso",
+      "Open windows terminal (powershell) in the Downloads folder or wherever the ISO is and type:",
+    downloadableFileName: "certutil -hashfile iso-name.iso sha256",
   },
   {
     id: 2,
     nameOfOS: "MacOS",
     description:
-      "open terminal in the Downloads folder or wherever the ISO is and type shasum",
-    downloadableFileName: "-a 256 iso-name.iso",
+      "open terminal in the Downloads folder or wherever the ISO is and type:",
+    downloadableFileName: "shasum -a 256 iso-name.iso",
   },
   {
     id: 3,
     nameOfOS: "Linux",
     description:
-      "open terminal in the Downloads folder or wherever the ISO is and type shasum",
-    downloadableFileName: "-a 256 iso-name.iso",
+      "Open terminal in the Downloads folder or wherever the ISO is and type:",
+    downloadableFileName: "sha256sum iso-name.iso",
   },
 ];
 ---
@@ -78,7 +78,7 @@ const stepOne = [
           <p class="font-title text-[#FCFCFD] text-xl md:text-2xl pt-2 pb-2">
             SHA256SUMS Below:
           </p>
-          <p class="text-[#E4E7EC]">archlinux-gui-plasma-2022.07-x86_64.iso</p>
+          <p class="text-[#E4E7EC]">IMAGE: tcetlinux-2023.05.05-x86_64.iso</p>
         </div>
         {
           /* bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-300 opacity-100 rounded-b-xl */
@@ -95,9 +95,9 @@ const stepOne = [
             class="z-20 w-full h-auto flex justify-around align-middle p-3 "
           >
             <p class="text-[#E4E7EC] flex-1 mt-1 break-all">
-              17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54
+              cb9257aea691441a0a7c628b8cc199d7746220651daf035d261c6670ac1a2f49
             </p>
-            <CopyToClipboard client:load text={"17099bf58c0e6294e356ead78d397fd61d1f06d201097fee44d1265936bc2b54"} />
+            <CopyToClipboard client:load text={"cb9257aea691441a0a7c628b8cc199d7746220651daf035d261c6670ac1a2f49"} />
           </span>
         </div>
       </div>
@@ -107,10 +107,9 @@ const stepOne = [
     <div class="flex bg-[#1D2939] border-2 border-[#344054] rounded-xl m-4 p-4">
       <img src={infoIconImg} class="w-4 h-4 object-contain mt-1" />
       <p class="text-[#D0D5DD] ml-2">
-        Please refer to the convention below. sha256sum is the long alphanumeric
-        string, on the left. iso-name refer to the name of the ISO. It should
-        contain the .iso extension. DOB stands for date of build. It has nothing
-        to do with the verification process. It's just there for reference.
+        IMAGE is <code>iso-name.iso</code> in <b>step 1</b>. It is the file that you have downloaded. Verification 
+        is done to check the authenticity of the file you have downloaded. Large files may get corrupted in the 
+        download process. TCET Linux team provides a new checksum for every new release of the operating system.
       </p>
     </div>
   </div>
