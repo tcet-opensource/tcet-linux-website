@@ -34,7 +34,7 @@ function InstallationSteps() {
     },
     {
       id: 4,
-      header: "Storage Partitiion",
+      header: "Storage Partition",
       description:
         "Automatic installation will create a Fat32 EFI System Partition, and a root partition with the selected filesystem. Default filesystem is ext4. We recommend you to do a manual installation. Checkout the tutorials page on how to do manual partitioning on UEFI/GPT systems.",
       image: storageImage,
