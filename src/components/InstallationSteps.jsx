@@ -15,28 +15,28 @@ function InstallationSteps() {
       id: 1,
       header: "Welcome Screen",
       description:
-        "Risus ornare fermentum egestas convallis quis. Donec ut pharetra placerat suspendisse.",
+        "Launch the installer by searching for 'Install TCET Linux'. The installer will look like this.",
       image: welcomeImage,
     },
     {
       id: 2,
       header: "Add Your Location",
       description:
-        "Porttitor penatibus velit risus fermentum facilisis. Sit at phasellus dictumst ut in.",
+        "Select your location by clicking on the timezones on the map. If you have internet connection, this should happen automatically.",
       image: locationImage,
     },
     {
       id: 3,
       header: "Select Your Keyboard",
       description:
-        "Tincidunt lobortis non quis egestas pulvinar maecenas. Molestie nulla vestibulum sodales facilisis vitae lacus aliquet.",
+        "Keyboard layout is automatically mapped by location. You can also check if the keyboard layout is correct by texting it in the text box.",
       image: keyboardImage,
     },
     {
       id: 4,
       header: "Storage Parition",
       description:
-        "Elit dolor amet quam et. Egestas risus libero diam lorem commodo.",
+        "Automatic installation will create a Fat32 EFI System Partition, and a root partition with the selected filesystem. Default filesystem is ext4. We recommend you to do a manual installation. Checkout the tutorials page on how to do manual paritioning on UEFI/GPT systems.",
       image: storageImage,
     },
   ];
@@ -45,28 +45,28 @@ function InstallationSteps() {
       id: 5,
       header: "User details",
       description:
-        "Risus ornare fermentum egestas convallis quis. Donec ut pharetra placerat suspendisse.",
+        "Add your username that will be visible on the login screen. The administrator account password is for the root user. You can keep it different from regular user to imporve security, or keep it same for the sake of convinience.",
       image: userImage,
     },
     {
       id: 6,
       header: "Summary",
       description:
-        "Porttitor penatibus velit risus fermentum facilisis. Sit at phasellus dictumst ut in.",
+        "This section will give you a summary of the choices you have made.",
       image: summaryImage,
     },
     {
       id: 7,
       header: "Installation",
       description:
-        "Tincidunt lobortis non quis egestas pulvinar maecenas. Molestie nulla vestibulum sodales facilisis vitae lacus aliquet.",
+        "Installation will take around 5-10 minutes, depending on the speed of your SSD/HDD.",
       image: installationImage,
     },
     {
       id: 8,
       header: "Installation Done",
       description:
-        "Elit dolor amet quam et. Egestas risus libero diam lorem commodo.",
+        "You can restart the system and boot into fresh install of TCET Linux",
       image: finishImage,
     },
   ];
