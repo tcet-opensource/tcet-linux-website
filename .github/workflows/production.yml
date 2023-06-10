@@ -1,31 +1,39 @@
-name: "ci-cd pipeline"
+name: Deploy to GitHub Pages
 
-on: 
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches:
-    - staging
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+  
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v2
-      with:
-        node-version: 16.x
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-    - name: Install dependencies
-      run: npm install 
+      - name: Checkout your repository using git
+        uses: actions/checkout@v3
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
+        # with:
+            # path: . # The root location of your Astro project inside the repository. (optional)
+            # node-version: 16 # The specific version of Node that should be used to build your site. Defaults to 16. (optional)
+            # package-manager: yarn # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 
-    - name: Build file
-      run: npm run build
-    - name: Deploy production to Netlify
-      uses: South-Paw/action-netlify-deploy@v1.2.0
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
-        build-dir: './build'
-        comment-on-commit: true
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
