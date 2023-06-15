@@ -5,9 +5,9 @@ import Layout from "../layouts/Layout.astro";
 
 <div>
   <!-- <hr><hr> -->
-  <section class="text-gray-600 body-font bg-[#101828]">
+  <section class="text-gray-600 body-font bg-[#101828] px-5 md:px-16">
     <div
-      class="w-11/12 mx-auto flex md:py-16 py-5 md:flex-row flex-col pb-5 items-center"
+      class="w-full  mx-auto flex md:flex-row flex-col items-center"
     >
       <div
         class="absolute z-30 py-0 left-0 w-80 h-96 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-100 opacity-30 blur-3xl flex-none order-4 rounded-xl transform -rotate-45 pointer-events-none"
@@ -29,16 +29,16 @@ import Layout from "../layouts/Layout.astro";
           Powered by Arch Linux & the TCET Open Source Community, TCET Linux the
           the premier operating system for engineering education in TCET Mumbai.
         </p>
-        <div class="flex items-center gap-2 md: gap-4">
+        <div class="flex items-center gap-2 md:gap-4">
           <div class="flex justify-center h-min">
             <a
-              class="inline-flex text-white bg-[#01105F] shadow-base shadow-sky-500 border-sky-500 border-y-2 py-2 px-6 focus:outline-none rounded-3xl text:base md:text-lg hover:bg-blue-700"
+              class="inline-flex text-white h-12 bg-[#01105F] shadow-base shadow-sky-500 border-sky-500 border-y-2 py-2 px-6 focus:outline-none rounded-3xl text:base md:text-lg hover:bg-blue-700"
               href="https://www.youtube.com/watch?v=8kL1NEtSIi4"
               target="_blank">Explore</a
             >
           </div>
           <button
-            class="flex flex-row w-fit p-2 px-4 cursor-pointer  gap-2 items-center justify-center border rounded-full border-white hover:bg-blue-50 hover:bg-opacity-20 text-white"
+            class="flex flex-row w-fit p-2 h-12 px-4 cursor-pointer  gap-2 items-center justify-center border rounded-full border-white hover:bg-blue-50 hover:bg-opacity-20 text-white"
             id="req-btn"
           >
             <span class=" h-6 md:font-semibold">Requirements</span>
@@ -59,13 +59,13 @@ import Layout from "../layouts/Layout.astro";
         >
         </div>
         <div class="z-50 flex align-middle rounded-xl m-2">
-          <img class="w-full object-contain" src="image 1.png" />
+          <img class="w-full object-contain ml-12" src="image 1.png" />
         </div>
       </div>
     </div>
   </section>
   <dialog id="requirements" class="w-5/6 md:w-3/4 lg:w-2/4 p-0 rounded-xl bg-[#293b5c] text-white opacity-3" >
-    <!-- style={{backgroundImage:" linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(25,37,56,1) 31%, rgba(49,137,154,1) 85%);"}} -->
+   
     <div id="inside-req" class="p-6 lg:p-8 w-full h-full space-y-2">
       <div class="flex justify-between " >
         <h1 class="text-2xl font-title font-semibold">Requirements</h1>
