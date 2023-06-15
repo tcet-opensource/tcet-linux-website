@@ -9,7 +9,7 @@ import installationImage from "../assets/image 15.png";
 import finishImage from "../assets/image 16.png";
 function InstallationSteps() {
   const [imageFirst, setImageFirst] = useState(welcomeImage);
-  const [imageSecond, setImageSecond] = useState(welcomeImage);
+  const [imageSecond, setImageSecond] = useState(userImage);
   const installationStepsFirstSet = [
     {
       id: 1,
@@ -71,9 +71,9 @@ function InstallationSteps() {
     },
   ];
   return (
-    <div id="installation" className="overflow-hidden bg-[#101828] py-4 px-4 lg:px-12">
+    <div id="installation" className=" px-5 md:px-16 overflow-hidden bg-[#101828]">
       <div className="">
-        <div className="py-12 px-6 w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
+        <div className="py-12  w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
           <div className="w-full xl:w-1/2 relative">
             <p className="text-[#6172F3] font-bold">INSTALLATION GUIDE</p>
             <p className="font-title text-[#FCFCFD] text-2xl md:text-4xl pt-2 pb-2">
@@ -110,7 +110,7 @@ function InstallationSteps() {
         </div>
       </div>
       <div className="">
-        <div className="px-6 pb-12 xl:pt-12 md:pt-12 sm:pt-0 w-full h-full flex flex-col xl:flex-row md:flex-row">
+        <div className=" pb-12 xl:pt-12 md:pt-12 sm:pt-0 w-full h-full flex flex-col xl:flex-row md:flex-row">
           <div className="relative w-full flex justify-center align-middle xl:w-1/2">
             <div className="absolute z-30 top-5 w-48 h-52 xl:w-[600px] xl:h-[450px] bg-[#98A2B3] opacity-30 blur-2xl flex-none order-4 rounded-full"></div>
             <div className="z-50 flex align-middle rounded-xl m-2">
@@ -123,7 +123,7 @@ function InstallationSteps() {
               TCET Linux Installation Steps
             </p>
             <div className="absolute z-30 top-20 right-0 w-48 h-52 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-100 opacity-30 blur-2xl flex-none order-4 rounded-full transform rotate-45"></div>
-            <div onMouseLeave={() => setImageSecond(welcomeImage)}>
+            <div onMouseLeave={() => setImageSecond(userImage)}>
               {installationStepsSecondSet.map((step) => (
                 <div
                   className="pt-6 cursor-pointer"
