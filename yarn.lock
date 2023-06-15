@@ -121,13 +121,6 @@
   dependencies:
     undici "^5.22.0"
 
-"@astrojs/webapi@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/webapi/-/webapi-2.1.1.tgz#965bcc35a72ca40e60e1ed4c2e4350f215bee179"
-  integrity sha512-mHZ7VgPNMeV3TYIw3SGHTKaJosBxA8bTzZ3QhNw509qvCJca4Lkjes8JywimuwTn+TMjEiv7ksNfwRluad3jqA==
-  dependencies:
-    undici "^5.22.0"
-
 "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.21.4":
   version "7.21.4"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.21.4.tgz"
@@ -1371,11 +1364,7 @@ esbuild-windows-arm64@0.15.18:
 
 esbuild@^0.15.18:
   version "0.15.18"
-<<<<<<< HEAD
-  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.15.18.tgz"
-=======
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.15.18.tgz#ea894adaf3fbc036d32320a00d4d6e4978a2f36d"
->>>>>>> a287bf4dda6cc76ac9115196297280e103479aa7
   integrity sha512-x/R72SmW3sSFRm5zrrIjAhCeQSAWoni3CmHEqfQrZIQTM3lVCdehdwuIqaOtfC2slvpdlLa62GYoN8SxT23m6Q==
   optionalDependencies:
     "@esbuild/android-arm" "0.15.18"
@@ -3102,11 +3091,7 @@ shebang-regex@^3.0.0:
 
 shiki@^0.14.1:
   version "0.14.2"
-<<<<<<< HEAD
-  resolved "https://registry.npmjs.org/shiki/-/shiki-0.14.2.tgz"
-=======
   resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.14.2.tgz#d51440800b701392b31ce2336036058e338247a1"
->>>>>>> a287bf4dda6cc76ac9115196297280e103479aa7
   integrity sha512-ltSZlSLOuSY0M0Y75KA+ieRaZ0Trf5Wl3gutE7jzLuIcWxLp5i/uEnLoQWNvgKXQ5OMpGkJnVMRLAuzjc0LJ2A==
   dependencies:
     ansi-sequence-parser "^1.1.0"
