@@ -71,9 +71,9 @@ function InstallationSteps() {
     },
   ];
   return (
-    <div id="installation" className="overflow-hidden bg-[#101828] py-4 px-4 lg:px-12">
+    <div id="installation" className="overflow-hidden bg-[#101828] py-4 ">
       <div className="">
-        <div className="py-12 px-6 w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
+        <div className="py-12 w-full h-full flex flex-col-reverse xl:flex-row md:flex-row">
           <div className="w-full xl:w-1/2 relative">
             <p className="text-[#6172F3] font-bold">INSTALLATION GUIDE</p>
             <p className="font-title text-[#FCFCFD] text-2xl md:text-4xl pt-2 pb-2">
