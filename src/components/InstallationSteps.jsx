@@ -9,7 +9,7 @@ import installationImage from "../assets/image 15.png";
 import finishImage from "../assets/image 16.png";
 function InstallationSteps() {
   const [imageFirst, setImageFirst] = useState(welcomeImage);
-  const [imageSecond, setImageSecond] = useState(welcomeImage);
+  const [imageSecond, setImageSecond] = useState(userImage);
   const installationStepsFirstSet = [
     {
       id: 1,
@@ -123,7 +123,7 @@ function InstallationSteps() {
               TCET Linux Installation Steps
             </p>
             <div className="absolute z-30 top-20 right-0 w-48 h-52 bg-gradient-to-r from-teal-100 via-indigo-500 to-pink-100 opacity-30 blur-2xl flex-none order-4 rounded-full transform rotate-45"></div>
-            <div onMouseLeave={() => setImageSecond(welcomeImage)}>
+            <div onMouseLeave={() => setImageSecond(userImage)}>
               {installationStepsSecondSet.map((step) => (
                 <div
                   className="pt-6 cursor-pointer"
