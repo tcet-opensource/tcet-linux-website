@@ -65,8 +65,9 @@ const { title, description } = Astro.props;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
+
   </head>
-  <body class="font-sans overflow-x-hidden">
+  <body class="font-sans">
     <Navbar client:load />
     <slot />
     <Footer />
