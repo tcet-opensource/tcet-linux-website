@@ -31,7 +31,13 @@ git clone -b experiment https://github.com/tcet-opensource/tcet-linux-website.gi
 2. Open Windows Terminal in the folder you have cloned the repo, as done in [step 2](#clone-the-repo).
 
 ### Install Important Packages/Dependencies
+Install yarn globally 
 
+```bash
+npm install -g yarn
+```
+
+You can make changes to your respective files and changes will be shown once you have saved the file.
 
 ### Run the site live locally + making changes
 
