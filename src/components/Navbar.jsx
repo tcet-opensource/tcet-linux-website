@@ -8,7 +8,7 @@ const navlinks = [
     },
     {
         title: "Documentation",
-        link: "https://opensource.tcetmumbai.in/docs/projects/tcet-linux/about-tcet-linux",
+        link: "/docs",
         newtab: true
     },
     {
